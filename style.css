@@ -1,4 +1,4 @@
-body{
+div{
     text-align: center;
 }
 
@@ -34,4 +34,18 @@ body{
 
 .userflash{
     background-color: green;
+}
+
+.video{
+    width: 640px;
+    height: 360px;
+    margin-left: 40px;
+}
+
+.video a{ 
+    color: rgb(11, 6, 32);
+    opacity: 0.8;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
 }
