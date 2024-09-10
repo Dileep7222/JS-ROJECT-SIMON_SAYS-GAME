@@ -10,9 +10,9 @@ let h2=document.querySelector("h2");
 
 document.addEventListener("keypress", function () {
     if(started==false){
-        console.log("game started");
+        console.log("game is started");
         started=true;
-
+  
         levelUp()
     }
 });
@@ -47,14 +47,14 @@ function levelUp(){
 
 function checkAns(idx){
     // console.log("current level:",level);
-    if (userSeq[idx]==gameSeq[idx]){
+    if (userSeq[idx]===gameSeq[idx]){
         if(userSeq.length==gameSeq.length){
-            setTimeout(levelUp,500)
+            setTimeout(levelUp,1000)
         }
-        console.log("same Value");
-}else{
+        // console.log("same Value");
+} else {
     
-    h2.innerHTML=`Game Over! Your Score Was <br> ${level} </br> Press Any Key to continue.`;
+    h2.innerHTML=`Game Over! Your Score Was <br> ${level} <br> Press Any Key to continue.`;
      document.querySelector("body").style.backgroundColor="red";
      setTimeout(function(){
          document.querySelector("body").style.backgroundColor="white";
@@ -69,9 +69,8 @@ function btnPress(){
  userFlash(btn);
 
  let userColor=btn.getAttribute("id");
- console.log(userColor); 
  userSeq.push(userColor);
-
+ 
  checkAns(userSeq.length-1);
 }
 
